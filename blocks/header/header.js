@@ -50,25 +50,6 @@ function openOnKeydown(e) {
 function focusNavSection() {
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
-function setupExpandSections(querySelector, navSections) {
-  const elements = navSections.querySelectorAll(querySelector);
-  elements.forEach((navSection, index) => {
-    if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-    const grandParent = navSection.parentNode.parentNode;
-    const navSectionDefaultExpanded = 2;
-    if(grandParent.nodeName === 'LI' && navSectionDefaultExpanded === index){
-      navSection.setAttribute('aria-expanded', 'true');
-    }
-
-    navSection.addEventListener('click', () => {
-      if (isDesktop.matches) {
-        const expanded = navSection.getAttribute('aria-expanded') === 'true';
-        toggleAllNavSections(navSections,querySelector);
-        navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      }
-    });
-  });
-}
 
 /**
  * Toggles all nav sections
@@ -122,6 +103,30 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+/**
+ * Mark nav sections that could be expanded
+ * @param {String} querySelector The specific nav section selector
+ * @param {Element} navSections The nav sections within the container element
+ */
+function setupExpandSections(querySelector, navSections) {
+  const elements = navSections.querySelectorAll(querySelector);
+  elements.forEach((navSection, index) => {
+    if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+    const grandParent = navSection.parentNode.parentNode;
+    const navSectionDefaultExpanded = 2;
+    if (grandParent.nodeName === 'LI' && navSectionDefaultExpanded === index) {
+      navSection.setAttribute('aria-expanded', 'true');
+    }
+
+    navSection.addEventListener('click', () => {
+      if (isDesktop.matches) {
+        const expanded = navSection.getAttribute('aria-expanded') === 'true';
+        toggleAllNavSections(navSections, querySelector);
+        navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      }
+    });
+  });
+}
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
