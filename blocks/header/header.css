@@ -42,6 +42,7 @@ header nav[aria-expanded='true'] {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+    max-width: 1440px;
   }
 }
 
@@ -52,6 +53,7 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  text-decoration: none;
 }
 
 /* hamburger */
@@ -145,7 +147,7 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 83px;
   height: auto;
 }
 
@@ -166,11 +168,13 @@ header nav[aria-expanded='true'] .nav-sections {
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
-  font-size: var(--body-font-size-s);
+  font-size: clamp(1.13rem, .08vw + 1.11rem, 1.2rem);
+/*var(--body-font-size-s);*/
+  color: #222;
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -198,11 +202,11 @@ header nav .nav-sections ul > li > ul > li {
     cursor: pointer;
   }
 
-  header nav .nav-sections .nav-drop::after {
+ /* header nav .nav-sections .nav-drop::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 0.5em;
+    top: 27px;
     right: 2px;
     transform: rotate(135deg);
     width: 6px;
@@ -210,7 +214,7 @@ header nav .nav-sections ul > li > ul > li {
     border: 2px solid currentcolor;
     border-radius: 0 1px 0 0;
     border-width: 2px 2px 0 0;
-  }
+  }*/
 
   header nav .nav-sections .nav-drop[aria-expanded='true']::after {
     top: unset;
@@ -220,6 +224,8 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
+    justify-content: center;
+    align-items: stretch;
     gap: 24px;
     margin: 0;
   }
@@ -227,22 +233,37 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+    padding: 17px 20px;
   }
+    header nav .nav-sections .default-content-wrapper > ul > li:hover {
+        background-color: #f0f0f0;
+    }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul {
+  header nav .nav-sections .default-content-wrapper > ul > li > ul,
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul {
     display: none;
     position: relative;
   }
+    header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] {
+        background-color: #f0f0f0;
+    }
 
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
     display: block;
-    position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
+    position: fixed;
+    left: 0;
+    width: 25%;
+    top: 64px;
+    padding: 24px;
+    background-color: #fff;
     white-space: initial;
+    border-bottom-color: #f0f0f0;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-top-color: #f0f0f0;
+    border-top-style: solid;
+    border-top-width: 2px;
+
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
@@ -257,8 +278,39 @@ header nav .nav-sections ul > li > ul > li {
     border-bottom: 8px solid var(--light-color);
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li,
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li {
+    padding: 8px 24px;
+  }
+    header nav .nav-sections .default-content-wrapper > ul > li > ul >  li[aria-expanded='true'] {
+        background-color: #f0f0f0;
+    }
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li:hover{
+        background-color: #f8f8f8;
+        z-index: -1;
+    }
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul > li[aria-expanded='true'] >ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      row-gap: 5px;
+      position: fixed;
+      left: 25%;
+      top: 64px;
+      width: 75%;
+      height: 59.2%;
+      padding: 24px;
+      background-color: #f0f0f0;
+      border-bottom-color: #f0f0f0;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+      border-top-color: #f0f0f0;
+      border-top-style: solid;
+      border-top-width: 2px;
+  }
+  {
+
   }
 }
 
