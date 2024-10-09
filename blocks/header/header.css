@@ -241,6 +241,7 @@ header nav .nav-sections ul > li > ul > li {
     display: none;
     position: relative;
   }
+
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] {
     background-color: #f0f0f0;
   }
@@ -274,20 +275,23 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li > ul > li {
     padding: 8px 24px;
   }
+
   header nav .nav-sections .default-content-wrapper > ul > li:hover {
     background-color: #f0f0f0;
   }
+
   header nav .nav-sections .default-content-wrapper > ul > li > ul >  li[aria-expanded='true'] {
     background-color: #f0f0f0;
   }
+
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li:hover{
     background-color: #f8f8f8;
     z-index: -1;
   }
+
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul > li[aria-expanded='true'] >ul {
       display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+      flex-flow: column wrap;
       justify-content: flex-start;
       row-gap: 5px;
       position: fixed;
