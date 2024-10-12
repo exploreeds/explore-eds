@@ -1,20 +1,146 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+    background-color: var(--light-color);
+    font-size: var(--body-font-size-xs);
+}
+
+footer .footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer .footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .footer > a {
+    width: 100%;
+    min-height: 25px;
+    background-color: #f8f8f8;
+    font-size: 15px;
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    padding: 16px;
+}
+
+footer .footer > a:hover {
+    background-color: #e0e0e0;
+    transition: all .3s ease-in-out;
 }
 
 footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+    margin: 0 24px;
 }
 
 footer .footer p {
-  margin: 0;
+    margin: 0;
+}
+
+footer .footer .footer-nav li {
+    margin: 8px 0;
+}
+
+footer .footer .footer-nav p,
+footer .footer .footer-nav a {
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+footer .footer .footer-icon-list-wrapper {
+    border-top: 2px solid #e0e0e0;
+}
+
+footer .footer .footer-icon-list {
+    margin: 24px 0;
+}
+
+footer .footer .default-content-wrapper > p {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+}
+
+footer .footer .footer-icon-list > div > div > p {
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer .footer-icon-list > div > div a {
+    display: block;
+    padding: 0 12px;
+}
+
+footer .footer .footer-icon-list > div > div img {
+    width: 40px;
+    height: 40px;
+}
+
+footer .footer .default-content-wrapper > p:first-child a {
+    padding: 4px 16px;
+    border-right: 2px #e0e0e0 solid;
+}
+
+footer .footer .default-content-wrapper > p:first-child a:last-child {
+    border-right: none;
+}
+
+footer .footer .default-content-wrapper > p:nth-child(2) img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
 
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+    footer .footer > div {
+        padding: 24px 0;
+    }
+
+    footer .footer .footer-nav a {
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 200% 1px;
+        transition: background-position .3s ease-in-out;
+    }
+
+    footer .footer .footer-nav a:hover {
+        text-decoration: none;
+        background-position: 0 100%;
+        background-image: linear-gradient(to left, transparent 50%, #222 50%);
+        cursor: pointer;
+    }
+
+    footer .footer .default-content-wrapper > p:first-child a {
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 200% 1px;
+        transition: background-position .3s ease-in-out;
+    }
+
+
+    footer .footer .default-content-wrapper > p:first-child a:hover {
+        text-decoration: none;
+        background-position: 0 100%;
+        background-image: linear-gradient(to left, transparent 50%, #222 50%);
+        cursor: pointer;
+    }
+
+    footer .footer .footer-nav-wrapper {
+        padding-bottom: 24px;
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    footer .footer .footer-nav > div {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    footer .footer .footer-nav > div > div {
+        flex: 0 0 auto;
+        width: 25%;
+    }
 }
