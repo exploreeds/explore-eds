@@ -14,7 +14,17 @@ export default async function decorate(block) {
   // decorate footer DOM
   block.textContent = '';
   const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  //Add back to Top button
+  const backTop = document.createElement('a');
+  backTop.className = 'backTop';
+  backTop.id = 'backTop';
+  backTop.textContent = 'Back to Top';
+  backTop.href = "#";
 
+  while (fragment.firstElementChild) {
+    footer.append(fragment.firstElementChild);
+  }
+
+  block.append(backTop);
   block.append(footer);
 }
