@@ -130,6 +130,8 @@ footer .footer .default-content-wrapper > p:nth-child(2) img {
 
     footer .footer .footer-nav-wrapper {
         padding-bottom: 24px;
+        max-width: 1440px;
+        margin: auto;
     }
 
     footer .footer .footer-nav > div {
