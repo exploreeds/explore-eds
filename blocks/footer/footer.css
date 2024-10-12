@@ -99,20 +99,20 @@ footer .footer .default-content-wrapper > p:nth-child(2) img {
         padding: 24px 0;
     }
 
-    footer .footer .footer-nav a:hover,
-    footer .footer .default-content-wrapper > p:first-child a:hover {
-        text-decoration: none;
-        background-position: 0 100%;
-        background-image: linear-gradient(to left, transparent 50%, #222 50%);
-        cursor: pointer;
-    }
-
     footer .footer .footer-nav a,
     footer .footer .default-content-wrapper > p:first-child a {
         background-position: 100% 100%;
         background-repeat: no-repeat;
         background-size: 200% 1px;
         transition: background-position .3s ease-in-out;
+    }
+
+    footer .footer .footer-nav a:hover,
+    footer .footer .default-content-wrapper > p:first-child a:hover {
+        text-decoration: none;
+        background-position: 0 100%;
+        background-image: linear-gradient(to left, transparent 50%, #222 50%);
+        cursor: pointer;
     }
 
     footer .footer .footer-nav-wrapper {
