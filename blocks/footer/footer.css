@@ -57,6 +57,13 @@ footer .footer .footer-icon-list {
     margin: 24px 0;
 }
 
+footer .footer .default-content-wrapper > p {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 24px;
+}
+
 footer .footer .footer-icon-list > div > div > p {
     display: flex;
     justify-content: center;
@@ -70,13 +77,6 @@ footer .footer .footer-icon-list > div > div a {
 footer .footer .footer-icon-list > div > div img {
     width: 40px;
     height: 40px;
-}
-
-footer .footer .default-content-wrapper > p {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 24px;
 }
 
 footer .footer .default-content-wrapper > p:first-child a {
@@ -99,6 +99,14 @@ footer .footer .default-content-wrapper > p:nth-child(2) img {
         padding: 24px 0;
     }
 
+    footer .footer .footer-nav a:hover,
+    footer .footer .default-content-wrapper > p:first-child a:hover {
+        text-decoration: none;
+        background-position: 0 100%;
+        background-image: linear-gradient(to left, transparent 50%, #222 50%);
+        cursor: pointer;
+    }
+
     footer .footer .footer-nav a,
     footer .footer .default-content-wrapper > p:first-child a {
         background-position: 100% 100%;
@@ -107,23 +115,13 @@ footer .footer .default-content-wrapper > p:nth-child(2) img {
         transition: background-position .3s ease-in-out;
     }
 
-    footer .footer .footer-nav a:hover,
-    footer .footer .default-content-wrapper > p:first-child a:hover {
-        text-decoration: none;
-        background-position: 0 100%;
-        background-image: linear-gradient(to left, transparent 50%, #222222 50%);
-        cursor: pointer;
-    }
-
-
     footer .footer .footer-nav-wrapper {
         padding-bottom: 24px;
     }
 
     footer .footer .footer-nav > div {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
     }
 
     footer .footer .footer-nav > div > div {
