@@ -1,0 +1,47 @@
+.newslist > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.newslist img {
+  width: 100%;
+}
+
+.newslist > div > div {
+  order: 1;
+}
+
+.newslist > div > .newslist-img-col {
+  order: 0;
+}
+
+.newslist > div > .newslist-img-col img {
+  display: block;
+}
+
+
+
+@media (width >= 900px) {
+  .newslist > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 24px;
+  }
+
+  .newslist > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
+
+.newslist .button-container a.button {
+    color: #474747;
+    background: none;
+    font-size: 16px;
+
+    border: 0 none;
+    border-bottom: 2px solid #80c343;
+    padding: 14px 0 4px;
+    min-width: auto;
+    border-radius: unset;
+}

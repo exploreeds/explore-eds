@@ -1,0 +1,23 @@
+.imagetext .block {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.imagetext img {
+    width: 240px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.imagetext p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/*
+以下是公共样式
+*/
+.text-align-center{
+    text-align: center;
+}
