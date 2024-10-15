@@ -227,6 +227,15 @@ main img {
   height: 100%;
   width: 100%;
 }
+.section.footnote > div {
+    margin: 60px auto 70px;
+    font-size: 14px;
+    color: #222;
+}
+.footnote a {
+    color: #222;
+    text-decoration: underline;
+}
 
 /* sections */
 main > .section {
