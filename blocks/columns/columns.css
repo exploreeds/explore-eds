@@ -18,6 +18,7 @@
 .columns > div > .columns-img-col img {
     display: block;
 }
+
 .columns > div .button-container a {
     color: #000;
     background-color: #80c343;
@@ -27,6 +28,7 @@
     border-radius: 0;
     margin-top: 20px;
 }
+
 .columns > div .button-container a:hover {
     background-color: #fff;
     border-color: #80c343;
@@ -36,20 +38,22 @@
     .section .columns-wrapper {
         padding-top: 32px;
     }
-    .columns-wrapper .columns > div {
-        max-width: 1414px;
-        padding-bottom: 70px;
-    }
 
     .columns > div {
         align-items: center;
         flex-direction: unset;
     }
 
+    .columns-wrapper .columns > div {
+        max-width: 1414px;
+        padding-bottom: 70px;
+    }
+
     .columns > div > div {
         flex: 1;
         order: unset;
     }
+
     .columns .columns-img-col {
         flex: 1 1 50%;
         width: 50%;
@@ -59,6 +63,7 @@
         max-width: 100%;
         object-fit: cover;
     }
+
     .columns-wrapper .columns > div > div:not([class]) {
         flex: 1 1 50%;
         padding: 0 3rem;
