@@ -44,14 +44,14 @@
         flex-direction: unset;
     }
 
-    .columns-wrapper .columns > div {
-        max-width: 1414px;
-        padding-bottom: 70px;
-    }
-
     .columns > div > div {
         flex: 1;
         order: unset;
+    }
+
+    .columns-wrapper .columns > div {
+        max-width: 1414px;
+        padding-bottom: 70px;
     }
 
     .columns .columns-img-col {
