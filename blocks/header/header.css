@@ -310,3 +310,10 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/*
+以下是公共样式
+*/
+.text-align-center{
+    text-align: center;
+}

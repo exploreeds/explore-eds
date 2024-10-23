@@ -1,0 +1,57 @@
+.newslist-flex > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.newslist-flex img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.newslist-flex h5 {
+    height: 90px;
+    overflow:hidden;
+}
+.newslist-flex h3 {
+    height: 90px;
+    overflow:hidden;
+}
+
+.newslist-flex > div >.newslist-flex-img-col img {
+    display: block;
+
+}
+
+@media (min-width: 900px) {
+    .newslist-flex > div {
+        align-items: center;
+        flex-direction: unset;
+        gap: 24px;
+    }
+
+    .newslist-flex > div > div {
+        flex: 1;
+    }
+}
+main > .section {
+    margin: 80px 0;
+}
+
+p,
+blockquote {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* links */
+a:any-link {
+    color: var(--text-color);
+    text-decoration: none;
+    word-break: break-word;
+}
+
+a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
