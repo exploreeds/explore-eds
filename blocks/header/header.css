@@ -305,8 +305,38 @@ header nav .nav-sections ul > li > ul > li {
       border-top: #f0f0f0 solid 2px;
   }
 }
-
-/* tools */
+/* float bar */
+header nav .floatbar-wrapper {
+    position: fixed;
+    left: 0;
+    background: #e0e0e0;
+    width: 100%;
+}
+header nav .floatbar-wrapper .floatbar {
+    max-width: 1366px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 24px;
+    margin: auto;
+    position: relative;
+}
+header nav .floatbar-wrapper .floatbar > div {
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .floatbar-wrapper .floatbar > div > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+}
+header nav .floatbar-wrapper .floatbar > div > div p{
+    padding: 0 18px;
+}
+    /* tools */
 header nav .nav-tools {
   grid-area: tools;
 }
