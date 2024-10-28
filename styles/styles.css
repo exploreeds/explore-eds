@@ -38,7 +38,7 @@
 
     /* nav height */
     --nav-height: 64px;
-    --header-height: var(--nav-height);
+    --header-height: 124px;
 }
 
 /* fallback fonts */
@@ -86,7 +86,7 @@ body.appear {
 }
 
 header {
-    height: var(--nav-height);
+    height: var(--header-height);
 }
 
 header .header,

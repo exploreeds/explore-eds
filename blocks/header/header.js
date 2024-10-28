@@ -180,9 +180,7 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
-
-// Fix header float bar
-window.addEventListener('scroll', function() {
+function fixFloatBar(){
   const defaultContentWrapper = document.querySelector('.default-content-wrapper');
   const floatbarContainer = document.querySelector('.floatbar-container');
 
@@ -194,6 +192,7 @@ window.addEventListener('scroll', function() {
     floatbarContainer.style.position = 'absolute';
     floatbarContainer.style.top = 'auto';
     floatbarContainer.style.marginTop = '124px';
-
   }
-});
+}
+// Fix header float bar
+window.addEventListener('scroll', () => fixFloatBar());
