@@ -3,7 +3,7 @@ header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 2;
-  position: fixed;
+  /*position: fixed;*/
 }
 
 header nav {
@@ -306,11 +306,13 @@ header nav .nav-sections ul > li > ul > li {
   }
 }
 /* float bar */
-header nav .floatbar-wrapper {
-    position: fixed;
-    left: 0;
+header nav .floatbar-container {
     background: #e0e0e0;
     width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 124px ;
+    z-index: 10;
 }
 header nav .floatbar-wrapper .floatbar {
     max-width: 1366px;
@@ -318,10 +320,9 @@ header nav .floatbar-wrapper .floatbar {
     font-size: 18px;
     padding: 0 24px;
     margin: auto;
-    position: relative;
 }
 header nav .floatbar-wrapper .floatbar > div {
-    padding: 16px 0;
+    padding: 12px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -335,6 +336,15 @@ header nav .floatbar-wrapper .floatbar > div > div {
 }
 header nav .floatbar-wrapper .floatbar > div > div p{
     padding: 0 18px;
+}
+header nav .floatbar-wrapper .floatbar > div > div a {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: #222;
+    padding: 0;
+    margin: 5px;
+
 }
     /* tools */
 header nav .nav-tools {

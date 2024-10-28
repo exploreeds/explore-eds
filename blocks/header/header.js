@@ -180,3 +180,20 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+/**
+ * Fix header float bar
+ */
+window.addEventListener('scroll', function() {
+  const defaultContentWrapper = document.querySelector('.default-content-wrapper');
+  const floatbarContainer = document.querySelector('.floatbar-container');
+
+  if (window.scrollY >= defaultContentWrapper.offsetTop + defaultContentWrapper.offsetHeight) {
+    floatbarContainer.style.position = 'fixed';
+    floatbarContainer.style.top = '0';
+    floatbarContainer.style.marginTop = '0';
+  } else {
+    floatbarContainer.style.position = 'absolute';
+    floatbarContainer.style.top = 'auto';
+    floatbarContainer.style.marginTop = '124px';
+  }
+});
