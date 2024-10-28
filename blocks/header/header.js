@@ -180,6 +180,7 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+
 function fixFloatBar(){
   const defaultContentWrapper = document.querySelector('.default-content-wrapper');
   const floatbarContainer = document.querySelector('.floatbar-container');
